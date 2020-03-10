@@ -21,9 +21,11 @@ private:
     Node* root;
 public:
     Tree();
+    ~Tree();
     void add(int v);
     void printTree();
     void printSubTree(Node*);
+    void empty(Node*);
 };
 
 

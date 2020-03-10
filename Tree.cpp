@@ -7,6 +7,22 @@ Tree::Tree():root(nullptr)
 {
 
 }
+
+Tree::~Tree()
+{
+    empty(root);
+}
+
+void Tree::empty(Node* node)
+{
+    if(node != nullptr)
+    {
+        empty(node->left);
+        empty(node->right);
+        delete node;
+    }
+}
+
 void Tree::add(int v)
 {
     if(root == nullptr)
